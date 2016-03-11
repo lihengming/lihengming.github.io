@@ -15,12 +15,14 @@
 <meta property="og:description" content="在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
 
 上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。">
-<meta property="og:updated_time" content="2016-03-11T08:37:28.250Z">
+<meta property="og:image" content="http://7xrrpf.com1.z0.glb.clouddn.com/2016%2F3%2F11Koala.jpg">
+<meta property="og:updated_time" content="2016-03-11T09:58:33.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Java 中回调函数的一些理解及与JavaScript的对比">
 <meta name="twitter:description" content="在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
 
 上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。">
+<meta name="twitter:image" content="http://7xrrpf.com1.z0.glb.clouddn.com/2016%2F3%2F11Koala.jpg">
   
     <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
   
@@ -30,6 +32,8 @@
   
       <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
+  
+      <link href="//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css" rel="stylesheet">
   
   <link rel="stylesheet" href="/css/style.css">
   
@@ -263,7 +267,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">caller：其他代码逻辑块</span><br><span class="line">callback：我被caller调用</span><br><span class="line">接收到caller调用我时传递的参数hi callback</span><br><span class="line">caller：其他代码逻辑块</span><br></pre></td></tr></table></figure>
 <p>在Java中相对就变得麻烦了，由于语言的特性，Java要实现回调函数(代码传递)的话要依赖于接口和匿名实现类</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用者</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Caller</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">excute</span><span class="params">(Callback callback)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"caller：其他代码逻辑块"</span>);</span><br><span class="line">		callback.invoke(<span class="string">"hi callback"</span>);</span><br><span class="line">		System.out.println(<span class="string">"caller：其他代码逻辑块"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//被调用者</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Callback</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">invoke</span><span class="params">(String param)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class CallbackExample &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Caller caller = new Caller();</span><br><span class="line">		</span><br><span class="line">		//在Java中使用回调函数(&quot;方法传递&quot;或&quot;代码传递&quot;可能更加容易理解)的话依赖于函数接口,通常是创建一个函数接口的匿名实现类</span><br><span class="line">		caller.excute(new Callback()&#123;</span><br><span class="line">			@Override</span><br><span class="line">			public void invoke(String param) &#123;</span><br><span class="line">				System.out.println(&quot;callback：我被caller调用&quot;);</span><br><span class="line">				System.out.println(&quot;接收到caller调用我时传递的参数&quot;+param);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;);</span><br><span class="line">		</span><br><span class="line">		//上面那个方式等同于这种写法(这样可能更好理解)</span><br><span class="line">		Callback  callback = new Callback()&#123;</span><br><span class="line">			@Override</span><br><span class="line">			public void invoke(String param) &#123;</span><br><span class="line">				System.out.println(&quot;callback：我被caller调用&quot;);</span><br><span class="line">				System.out.println(&quot;接收到caller调用我时传递的参数&quot;+param);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;;</span><br><span class="line">		caller.excute(callback);</span><br><span class="line">		</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CallbackExample</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Caller caller = <span class="keyword">new</span> Caller();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//在Java中使用回调函数("方法传递"或"代码传递"可能更加容易理解)的话依赖于函数接口,通常是创建一个函数接口的匿名实现类</span></span><br><span class="line">		caller.excute(<span class="keyword">new</span> Callback()&#123;</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invoke</span><span class="params">(String param)</span> </span>&#123;</span><br><span class="line">				System.out.println(<span class="string">"callback：我被caller调用"</span>);</span><br><span class="line">				System.out.println(<span class="string">"接收到caller调用我时传递的参数"</span>+param);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//上面那个方式等同于这种写法(这样可能更好理解)</span></span><br><span class="line">		Callback  callback = <span class="keyword">new</span> Callback()&#123;</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invoke</span><span class="params">(String param)</span> </span>&#123;</span><br><span class="line">				System.out.println(<span class="string">"callback：我被caller调用"</span>);</span><br><span class="line">				System.out.println(<span class="string">"接收到caller调用我时传递的参数"</span>+param);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;;</span><br><span class="line">		caller.excute(callback);</span><br><span class="line">		</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">caller：其他代码逻辑块</span><br><span class="line">callback：我被caller调用</span><br><span class="line">接收到caller调用我时传递的参数hi callback</span><br><span class="line">caller：其他代码逻辑块</span><br></pre></td></tr></table></figure>
 <p>我们可以看到，由于Java是静态语言，实现回调函数(代码传递)的话还是很麻烦的，不过在Java8中加入了Lambda表达式，利用它可以使回调函数(代码传递)变得非常简单和优美。</p>
@@ -271,6 +275,7 @@
 <p>输出和上面的一样。</p>
 <p>在Java中使用回调函数和代理模式有点相似，都是将重复的代码抽象出来，然后由调用者来回调各自不同的逻辑处理代码。</p>
 <p><strong>个人总结</strong>：回调函数就是把一段代码传递到调用者的方法内，然后执行这段代码。</p>
+<p> <img src="http://7xrrpf.com1.z0.glb.clouddn.com/2016%2F3%2F11Koala.jpg" alt="测试图片"></p>
 
       
     </div>
@@ -282,7 +287,7 @@
         <p><span>本文标题:</span><a href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Potato 的个人博客">Potato</a></p>
         <p><span>发布时间:</span>2016年03月11日 - 13时53分</p>
-        <p><span>最后更新:</span>2016年03月11日 - 16时37分</p>
+        <p><span>最后更新:</span>2016年03月11日 - 17时58分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/11/callback/" title="关于Java 中回调函数的一些理解及与JavaScript的对比">http://potato.coding.io/2016/03/11/callback/</a>
             <span class="copy-path" data-clipboard-text="原文: http://potato.coding.io/2016/03/11/callback/　　作者: Potato" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -309,49 +314,6 @@
 
   
 </article>
-
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li></ol>
-</div>
-<style>
-    .left-col .switch-btn {
-        display: none;
-    }
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
-
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-</script>
-
-
 
 
     <div class="share">
@@ -494,6 +456,8 @@
     })
 </script>
 
+
+    <script src="//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
