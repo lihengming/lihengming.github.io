@@ -7,26 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="初始化配置
 
-```xml配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
+```html配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
 配置使用git仓库的人员emailgit config –global user.email you@yourdomain.example.com  
-配置到缓存 默认15分钟git config –global credential.">
+配置到缓存 默认15分钟git config –global credential">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 常用命令">
 <meta property="og:url" content="http://potato.coding.io/2016/03/14/git/index.html">
 <meta property="og:site_name" content="土豆的博客">
 <meta property="og:description" content="初始化配置
 
-```xml配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
+```html配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
 配置使用git仓库的人员emailgit config –global user.email you@yourdomain.example.com  
-配置到缓存 默认15分钟git config –global credential.">
+配置到缓存 默认15分钟git config –global credential">
 <meta property="og:updated_time" content="2016-03-14T06:42:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 常用命令">
 <meta name="twitter:description" content="初始化配置
 
-```xml配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
+```html配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
 配置使用git仓库的人员emailgit config –global user.email you@yourdomain.example.com  
-配置到缓存 默认15分钟git config –global credential.">
+配置到缓存 默认15分钟git config –global credential">
   
     <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
   
@@ -269,12 +269,12 @@
         <ul>
 <li><strong><em>初始化配置</em></strong></li>
 </ul>
-<p>```xml<br>配置使用git仓库的人员姓名<br>git config –global user.name “Your Name Comes Here”  </p>
+<p>```html<br>配置使用git仓库的人员姓名<br>git config –global user.name “Your Name Comes Here”  </p>
 <p>配置使用git仓库的人员email<br>git config –global user.email you@yourdomain.example.com  </p>
 <p>配置到缓存 默认15分钟<br>git config –global credential.helper cache   </p>
 <p>修改缓存时间<br>git config –global credential.helper ‘cache –timeout=3600’    </p>
 <p>git config –global color.ui true<br>git config –global alias.co checkout<br>git config –global alias.ci commit<br>git config –global alias.st status<br>git config –global alias.br branch<br>git config –global core.editor “mate -w”     设置Editor使用textmate<br>git config -1 列举所有配置  </p>
-<p>用户的git配置文件~/.gitconfig<br>```xml<br><a id="more"></a></p>
+<p>用户的git配置文件~/.gitconfig<br>```html<br><a id="more"></a></p>
 <ul>
 <li><strong><em>查看、添加、提交、删除、找回，重置修改文件</em></strong></li>
 </ul>
@@ -300,38 +300,38 @@ git ci --amend       修改最后一次提交记录
 
 git revert &lt;$id&gt;     恢复某次提交的状态，恢复动作本身也创建了一次提交对象  
 git revert HEAD      恢复最后一次提交的状态  
-</code></pre><p>```xml</p>
+</code></pre><p>```html</p>
 <ul>
 <li><strong><em>查看文件diff</em></strong></li>
 </ul>
-<p><code>xml
+<p><code>html
 git diff &lt;file&gt;      比较当前文件和暂存区文件差异  
 git diff  
 git diff &lt;$id1&gt; &lt;$id2&gt;    比较两次提交之间的差异  
 git diff &lt;branch1&gt;..&lt;branch2&gt;  在两个分支之间比较  
 git diff --staged    比较暂存区和版本库差异  
 git diff --cached    比较暂存区和版本库差异  
-git diff --stat      仅仅比较统计信息</code>xml</p>
+git diff --stat      仅仅比较统计信息</code>html</p>
 <ul>
 <li><strong><em>查看提交记录</em></strong></li>
 </ul>
-<p><code>xml
+<p><code>html
 git log  
 git log &lt;file&gt;       查看该文件每次提交记录  
 git log -p &lt;file&gt;    查看每次详细修改内容的diff  
 git log -p -2        查看最近两次详细修改内容的diff  
-git log --stat      查看提交统计信息</code>xml</p>
+git log --stat      查看提交统计信息</code>html</p>
 <ul>
 <li><strong><em>取得Git仓库</em></strong></li>
 </ul>
-<p>```xml<br>初始化一个版本仓库<br>git init  </p>
+<p>```html<br>初始化一个版本仓库<br>git init  </p>
 <p>Clone远程版本库<br>git clone git@xbc.me:wordpress.git  </p>
 <p>添加远程版本库origin，语法为 git remote add [shortname] [url]<br>git remote add origin git@xbc.me:wordpress.git  </p>
-<p>查看远程仓库<br>git remote -v<br>```xml</p>
+<p>查看远程仓库<br>git remote -v<br>```html</p>
 <ul>
 <li><strong><em>提交你的修改</em></strong></li>
 </ul>
-<p>```xml<br>添加当前修改的文件到暂存区<br>git add .  </p>
+<p>```html<br>添加当前修改的文件到暂存区<br>git add .  </p>
 <p>如果你自动追踪文件，包括你已经手动删除的，状态为Deleted的文件<br>git add -u  </p>
 <p>提交你的修改<br>git commit –m “你的注释”  </p>
 <p>推送你的更新到远程服务器,语法为 git push [远程名] [本地分支]:[远程分支]<br>git push origin master  </p>
@@ -345,9 +345,9 @@ git log --stat      查看提交统计信息</code>xml</p>
 <p>忘记提交某些修改，下面的三条命令只会得到一个提交。<br>git commit –m &quot;add readme.txt&quot;<br>git add readme_forgotten<br>git commit –amend  </p>
 <p>假设你已经使用git add .，将修改过的文件a、b加到暂存区  </p>
 <p>现在你只想提交a文件，不想提交b文件，应该这样<br>git reset HEAD b  </p>
-<p>取消对文件的修改<br>git checkout –- readme.txt<br>```xml</p>
+<p>取消对文件的修改<br>git checkout –- readme.txt<br>```html</p>
 <ul>
-<li><strong><em>基本的分支管理</em></strong><br>```xml</li>
+<li><strong><em>基本的分支管理</em></strong><br>```html</li>
 </ul>
 <p>创建一个分支<br>git branch iss53  </p>
 <p>切换工作目录到iss53<br>git chekcout iss53  </p>
@@ -355,13 +355,13 @@ git log --stat      查看提交统计信息</code>xml</p>
 <p>合并iss53分支，当前工作目录为master<br>git merge iss53  </p>
 <p>合并完成后，没有出现冲突，删除iss53分支<br>git branch –d iss53  </p>
 <p>拉去远程仓库的数据，语法为 git fetch [remote-name]<br>git fetch  </p>
-<p>fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并<br>git pull<br>```xml</p>
+<p>fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并<br>git pull<br>```html</p>
 <ul>
 <li><strong><em>Git远程分支管理</em></strong></li>
 </ul>
-<p>```xml<br>git pull                          抓取远程仓库所有分支更新并合并到本地<br>git pull –no-ff                  抓取远程仓库所有分支更新并合并到本地，不要快进合并<br>git fetch origin                  抓取远程仓库更新<br>git merge origin/master           将远程主分支合并到本地当前分支<br>git co –track origin/branch      跟踪某个远程分支创建相应的本地分支<br>git co -b <local_branch> origin/<remote_branch>   基于远程分支创建本地分支，功能同上  </remote_branch></local_branch></p>
-<p>git push                          push所有分支<br>git push origin master            将本地主分支推到远程主分支<br>git push -u origin master         将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)<br>git push origin <local_branch>    创建远程分支， origin是远程仓库名<br>git push origin <local_branch>:<remote_branch>   创建远程分支<br>git push origin :<remote_branch>  先删除本地分支(git br -d <branch>)，然后再push删除远程分支<br>```xml</branch></remote_branch></remote_branch></local_branch></local_branch></p>
-<p>```xml<br>查看远程仓库的信息<br>git remote show origin  </p>
+<p>```html<br>git pull                          抓取远程仓库所有分支更新并合并到本地<br>git pull –no-ff                  抓取远程仓库所有分支更新并合并到本地，不要快进合并<br>git fetch origin                  抓取远程仓库更新<br>git merge origin/master           将远程主分支合并到本地当前分支<br>git co –track origin/branch      跟踪某个远程分支创建相应的本地分支<br>git co -b <local_branch> origin/<remote_branch>   基于远程分支创建本地分支，功能同上  </remote_branch></local_branch></p>
+<p>git push                          push所有分支<br>git push origin master            将本地主分支推到远程主分支<br>git push -u origin master         将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)<br>git push origin <local_branch>    创建远程分支， origin是远程仓库名<br>git push origin <local_branch>:<remote_branch>   创建远程分支<br>git push origin :<remote_branch>  先删除本地分支(git br -d <branch>)，然后再push删除远程分支<br>```html</branch></remote_branch></remote_branch></local_branch></local_branch></p>
+<p>```html<br>查看远程仓库的信息<br>git remote show origin  </p>
 <p>建立本地的dev分支追踪远程仓库的develop分支<br>git checkout –b dev origin/develop  </p>
 <p>Git远程仓库管理</p>
 <p>git remote -v                     查看远程服务器地址和仓库名称<br>git remote show origin            查看远程服务器仓库状态<br>git remote add origin git@ github:robbin/robbin_site.git          添加远程仓库地址<br>git remote set-url origin git@ github.com:robbin/robbin_site.git  设置远程仓库地址(用于修改远程仓库地址)<br>git remote rm <repository>        删除远程仓库  </repository></p>
@@ -370,7 +370,7 @@ git log --stat      查看提交统计信息</code>xml</p>
 <p>mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git –bare init  在服务器创建纯仓库<br>git remote add origin git@ github.com:robbin/robbin_site.git     设置远程仓库地址<br>git push -u origin master                                       客户端首次提交<br>git push -u origin develop   首次将本地develop分支提交到远程develop分支，并且track  </p>
 <p>git remote set-head origin master    设置远程仓库的HEAD指向master分支  </p>
 <p>也可以命令设置跟踪远程库和本地库</p>
-<p>git branch –set-upstream master origin/master<br>git branch –set-upstream develop origin/develop<br>```xml</p>
+<p>git branch –set-upstream master origin/master<br>git branch –set-upstream develop origin/develop<br>```html</p>
 
       
     </div>
