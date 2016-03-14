@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Struts2 - 常用的constant配置 | 土豆的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Struts2 - 常用的constant配置">
+<meta property="og:url" content="http://potato.coding.io/2016/03/14/struts2-constant/index.html">
+<meta property="og:site_name" content="土豆的博客">
+<meta property="og:description">
+<meta property="og:updated_time" content="2016-03-14T02:34:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Struts2 - 常用的constant配置">
+<meta name="twitter:description">
+  
+    <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  
+      <link href="//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/head.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Potato</a></h1>
+        </hgroup>
+
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="mailto:89921218@qq.com" title="Email"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Callback/" style="font-size: 10px;">Callback</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/struts2/" style="font-size: 10px;">struts2</a> <a href="/tags/回调函数/" style="font-size: 10px;">回调函数</a> <a href="/tags/配置文件/" style="font-size: 10px;">配置文件</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://coding.net/">Coding</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.qiniu.com/">七牛云存储</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">全栈工程师养成中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Potato</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/head.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Potato</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="mailto:89921218@qq.com" title="Email"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-struts2-constant" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/14/struts2-constant/" class="article-date">
+      <time datetime="2016-03-14T02:34:25.000Z" itemprop="datePublished">2016-03-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Struts2 - 常用的constant配置
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/速查/">速查</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/struts2/">struts2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置文件/">配置文件</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE struts PUBLIC</span><br><span class="line">    &quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;</span><br><span class="line">    &quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;struts&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 把它设置为开发模式，发布时要设置为false --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.devMode&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">    &lt;!-- 设置在class被修改时是否热加载，发布时要设置为false --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.convention.classes.reload&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">    &lt;!-- 自动动态方法的调用，使用这个设置后可以这样调用：action!method --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.enable.DynamicMethodInvocation&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">    &lt;!-- 指定jsp文件所在的目录地址 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.convention.result.path&quot; value=&quot;/WEB-INF/content/&quot; /&gt;</span><br><span class="line">    &lt;!-- 使用struts-default默认的转换器，如果是rest的使用：rest-default，rest需要rest的jar插件 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.convention.default.parent.package&quot; value=&quot;struts-default&quot;/&gt;</span><br><span class="line">    &lt;!-- 用于配置包名后缀。默认为action、actions、struts--&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.convention.package.locators&quot; value=&quot;actions&quot; /&gt;</span><br><span class="line">    &lt;!-- 用于配置类名后缀，默认为Action，设置后，Struts2只会去找这种后缀名的类做映射 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.convention.action.suffix&quot; value=&quot;Action&quot;/&gt;</span><br><span class="line">    &lt;!-- 设置即使没有@Action注释，依然创建Action映射。默认值是false。因为Convention-Plugin是约定优于配置的风格，</span><br><span class="line">        可以不通过注解根据预先的定义就能访问相应Action中的方法 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.convention.action.mapAllMatches&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">    &lt;!-- 自定义jsp文件命名的分隔符 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.convention.action.name.separator&quot; value=&quot;-&quot; /&gt;</span><br><span class="line">    &lt;!-- 国际化资源文件名称 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.custom.i18n.resources&quot; value=&quot;i18n&quot; /&gt;</span><br><span class="line">    &lt;!-- 是否自动加载国际化资源文件  --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.i18n.reload&quot; value=&quot;true&quot; /&gt;</span><br><span class="line">    &lt;!-- 浏览器是否缓存静态内容 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.serve.static.browserCache&quot; value=&quot;false&quot; /&gt;</span><br><span class="line">     &lt;!-- 上传文件大小限制设置 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.multipart.maxSize&quot; value=&quot;-1&quot; /&gt;</span><br><span class="line">    &lt;!-- 主题，将值设置为simple，即不使用UI模板。这将不会生成额外的html标签 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.ui.theme&quot; value=&quot;simple&quot; /&gt;</span><br><span class="line">    &lt;!-- 编码格式 --&gt;</span><br><span class="line">    &lt;constant name=&quot;struts.i18n.encoding&quot; value=&quot;UTF-8&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/struts&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>基础Constants
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">struts.devMode 可选值true,false （默认false），在开发模式下，struts2的动态重新加载配置和资源文件的功能会默认生效。同时开发模式下也会提供更完善的日志支持。 </span><br><span class="line">struts.i18n.reload 可选值true,false（默认值依赖于struts.devMode），是否自动重新加载本地的资源文件。 </span><br><span class="line">struts.i18n.encoding 主要用于设置请求编码（默认值（UTF-8）） ，Head和Include标签的解析编码。 资源和配置文件的解析编码。 </span><br><span class="line">struts.configuration.xml.reload 可选值true,false（默认值依赖于struts.devMode）是否自动重新加载XML配置文件 </span><br><span class="line">struts.action.extension 设置struts的Action请求的后缀，支持多个时以逗号隔开。 </span><br><span class="line">struts.action.excludePattern 设置struts所排除的url（通过正则表达式匹配）（支持多个，以逗号隔开） </span><br><span class="line">struts.tag.altSyntax 可选值true，false（默认true） 是否支持ognl表达式 </span><br><span class="line">struts.url.http.port 设置生成URL所对应的http端口 </span><br><span class="line">struts.url.https.port 设置生成URL所对应的https端口 </span><br><span class="line">struts.url.includeParams 可选值 none, get, all (默认get)，设置URL是否包含参数，以及是否只包含GET方式的参数。 </span><br><span class="line">struts.locale 设置struts2默认的locale，决定使用哪个资源文件。 </span><br><span class="line">struts.ui.templateDir 该属性指定视图主题所需要模板文件的位置，该属性的默认值是template，即默认加载template路径下的模板文件 </span><br><span class="line">struts.ui.theme 该属性指定视图标签默认的视图主题，该属性的默认值是xhtml。 </span><br><span class="line">struts.ui.templateSuffix 该属性指定模板文件的后缀，该属性的默认属性值是ftl。该属性还允许使用ftl、vm或jsp，分别对应FreeMarker、Velocity和JSP模板 </span><br><span class="line">struts.multipart.saveDir 设置上传临时文件的默认目录 </span><br><span class="line">struts.multipart.maxSize 设置上传的临时文件的最大限制 </span><br><span class="line">struts.objectFactory.spring.autoWire 可选值（name, type, auto, constructor,name）（默认name），设置spring的自动装配方式，只有引入spring插件后才有效。 </span><br><span class="line">struts.objectFactory.spring.autoWire.alwaysRespect （默认false）设置是否总是以自动装配策略创建对象。 </span><br><span class="line">struts.objectFactory.spring.useClassCache （默认false）对象工厂是否使用类缓存，开发模式无效。 </span><br><span class="line">struts.xslt.nocache （默认为false）设置XsltResult是否不是用缓存。 </span><br><span class="line">struts.custom.properties 设置用户的自定义属性文件名列表（用，隔开） </span><br><span class="line">struts.custom.i18n.resources 设置用户自定义的资源文件路径列表（用，隔开） </span><br><span class="line">struts.serve.static （默认false） 设置是否支持静态资源请求（要求url在struts或static下） </span><br><span class="line">struts.serve.static.browserCache （默认false） 是否在静态资源响应中设置缓存。只有在支持静态资源时有效。 </span><br><span class="line">struts.el.throwExceptionOnFailure （默认false）是否在解析el表达式或无法找到属性时抛出RuntimeException </span><br><span class="line">struts.ognl.logMissingProperties （默认false）是否日志无发找到的属性 </span><br><span class="line">struts.ognl.enableExpressionCache 是否缓存ognl解析的表达式。 </span><br><span class="line">struts.enable.DynamicMethodInvocation （默认false）是否支持动态的方法调用,在URL上通过!method指定方法。 </span><br><span class="line">struts.enable.SlashesInActionNames 在URL中的Action段中是否支持斜线 </span><br><span class="line">struts.mapper.alwaysSelectFullNamespace （默认false） 是否总是用最后一个斜线前的URL段作为namespace</span><br></pre></td></tr></table></figure>
+<pre><code>核心对象Constants
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">struts.actionProxyFactory 设置ActionProxy的实体工厂，该工厂同时也生成默认的ActionInvoctation </span><br><span class="line">struts.xworkConverter 设置XWorkConverter对象，该对象用于获取各种类型的转换器。 </span><br><span class="line">struts.unknownHandlerManager 设置UnknownHandlerManager的实现类，用于处理无法找到方法等异常。 </span><br><span class="line">struts.multipart.handler 设置mutipartRequest的handler （默认是jakarta）对应类，org.apache.struts2.dispatcher.multipart.JakartaMultiPartRequest </span><br><span class="line">struts.mapper.class 可选值（struts，composite，restful，restful2）设置URL解析且映射到ACTION的实现，（默认struts）. </span><br><span class="line">struts.mapper.prefixMapping 通过URL前缀映射到对应的Mapper，格式为urlPrefix1:mapperName2,urlPrefix2:mapperName2。必须添加mapperClass为org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper，并指定struts.mapper.class为该mapper。 </span><br><span class="line">struts.mapper.composite 设置是否支持复合（多个）actionMapper，mapperName用逗号隔开。必须配置struts.mapper.class 为composite 才会生效 </span><br><span class="line">struts.mapper.idParameterName 用于Restful2ActionMapper作为URL中id所对应的parameterName </span><br><span class="line">struts.ognl.allowStaticMethodAccess （默认false）设置ognl表达式是否支持静态方法。 </span><br><span class="line">struts.configuration 设置struts2的Settings类。（2.1.2后不再使用） </span><br><span class="line">struts.urlRenderer 设置struts2的URL render（用于生成的URL），（默认struts），类名org.apache.struts2.components.ServletUrlRenderer </span><br><span class="line">struts.objectFactory 设置struts2的对象工厂，默认（struts），类名org.apache.struts2.impl.StrutsObjectFactory，当引入struts2-spring插件之后，则被修改为org.apache.struts2.spring.StrutsSpringObjectFactory </span><br><span class="line">struts.xworkTextProvider 设置struts2的资源文件内容提供类的实现。默认为com.opensymphony.xwork2.TextProviderSupport </span><br><span class="line">struts.actionValidatorManager 设置ActionValidatorManager 的实现类。 </span><br><span class="line">struts.valueStackFactory 设置struts2的ValueStack工厂的实现。 </span><br><span class="line">struts.reflectionProvider 设置ReflectionProvider的实现类 </span><br><span class="line">struts.reflectionContextFactory 设置ReflectionContextFactory的实现类 </span><br><span class="line">struts.patternMatcher 设置PatternMatcher的实现类 </span><br><span class="line">struts.staticContentLoader 设置StaticContentLoader的实现类</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Potato 的个人博客">Potato</a></p>
+        <p><span>发布时间:</span>2016年03月14日 - 10时34分</p>
+        <p><span>最后更新:</span>2016年03月14日 - 10时34分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/14/struts2-constant/" title="Struts2 - 常用的constant配置">http://potato.coding.io/2016/03/14/struts2-constant/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://potato.coding.io/2016/03/14/struts2-constant/　　作者: Potato" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/03/14/春天到了/">
+                    &#39;春天到了&#39;
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+    <div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+        <section class="youyan" id="comments">
+  <div id="uyan_frame"></div>
+  <script src="http://v2.uyan.cc/code/uyan.js?uid=2087817"></script>
+</section>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/03/14/春天到了/" title="下一篇: &#39;春天到了&#39;">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/春天到了/">'春天到了'</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/hello-world/">Hello World</a></li></ul>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 Potato
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+
+    <script src="//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
