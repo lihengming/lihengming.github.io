@@ -5,16 +5,28 @@
   
   <title>Git 常用命令 | 土豆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="*git常用命令收集">
+  <meta name="description" content="初始化配置
+
+```xml配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
+配置使用git仓库的人员emailgit config –global user.email you@yourdomain.example.com  
+配置到缓存 默认15分钟git config –global credential.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 常用命令">
 <meta property="og:url" content="http://potato.coding.io/2016/03/14/git/index.html">
 <meta property="og:site_name" content="土豆的博客">
-<meta property="og:description" content="*git常用命令收集">
+<meta property="og:description" content="初始化配置
+
+```xml配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
+配置使用git仓库的人员emailgit config –global user.email you@yourdomain.example.com  
+配置到缓存 默认15分钟git config –global credential.">
 <meta property="og:updated_time" content="2016-03-14T06:42:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 常用命令">
-<meta name="twitter:description" content="*git常用命令收集">
+<meta name="twitter:description" content="初始化配置
+
+```xml配置使用git仓库的人员姓名git config –global user.name “Your Name Comes Here”  
+配置使用git仓库的人员emailgit config –global user.email you@yourdomain.example.com  
+配置到缓存 默认15分钟git config –global credential.">
   
     <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
   
@@ -254,42 +266,111 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
-<p>*git常用命令收集<br><a id="more"></a></p>
-<ul>
+        <ul>
 <li><strong><em>初始化配置</em></strong></li>
 </ul>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">配置使用git仓库的人员姓名  </span><br><span class="line">git config --global user.name &quot;Your Name Comes Here&quot;  </span><br><span class="line">  </span><br><span class="line">配置使用git仓库的人员email  </span><br><span class="line">git config --global user.email you@yourdomain.example.com  </span><br><span class="line">  </span><br><span class="line">配置到缓存 默认15分钟  </span><br><span class="line">git config --global credential.helper cache   </span><br><span class="line">  </span><br><span class="line">修改缓存时间  </span><br><span class="line">git config --global credential.helper &apos;cache --timeout=3600&apos;    </span><br><span class="line">  </span><br><span class="line">git config --global color.ui true  </span><br><span class="line">git config --global alias.co checkout  </span><br><span class="line">git config --global alias.ci commit  </span><br><span class="line">git config --global alias.st status  </span><br><span class="line">git config --global alias.br branch  </span><br><span class="line">git config --global core.editor &quot;mate -w&quot;     设置Editor使用textmate  </span><br><span class="line">git config -1 列举所有配置  </span><br><span class="line">  </span><br><span class="line">用户的git配置文件~/.gitconfig</span><br></pre></td></tr></table></figure>
+<p>```xml<br>配置使用git仓库的人员姓名<br>git config –global user.name “Your Name Comes Here”  </p>
+<p>配置使用git仓库的人员email<br>git config –global user.email you@yourdomain.example.com  </p>
+<p>配置到缓存 默认15分钟<br>git config –global credential.helper cache   </p>
+<p>修改缓存时间<br>git config –global credential.helper ‘cache –timeout=3600’    </p>
+<p>git config –global color.ui true<br>git config –global alias.co checkout<br>git config –global alias.ci commit<br>git config –global alias.st status<br>git config –global alias.br branch<br>git config –global core.editor “mate -w”     设置Editor使用textmate<br>git config -1 列举所有配置  </p>
+<p>用户的git配置文件~/.gitconfig<br>```xml<br><a id="more"></a></p>
 <ul>
 <li><strong><em>查看、添加、提交、删除、找回，重置修改文件</em></strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">git help &lt;command&gt;   显示command的help  </span><br><span class="line">    git show             显示某次提交的内容  </span><br><span class="line">    git show $id  </span><br><span class="line">       </span><br><span class="line">    git co  -- &lt;file&gt;    抛弃工作区修改  </span><br><span class="line">    git co  .            抛弃工作区修改  </span><br><span class="line">       </span><br><span class="line">    git add &lt;file&gt;       将工作文件修改提交到本地暂存区  </span><br><span class="line">    git add .            将所有修改过的工作文件提交暂存区  </span><br><span class="line">       </span><br><span class="line">    git rm &lt;file&gt;        从版本库中删除文件  </span><br><span class="line">    git rm &lt;file&gt; --cached   从版本库中删除文件，但不删除文件  </span><br><span class="line">       </span><br><span class="line">    git reset &lt;file&gt;     从暂存区恢复到工作文件  </span><br><span class="line">    git reset -- .       从暂存区恢复到工作文件  </span><br><span class="line">    git reset --hard     恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改  </span><br><span class="line">       </span><br><span class="line">    git ci &lt;file&gt;  </span><br><span class="line">    git ci .  </span><br><span class="line">    git ci -a            将git add, git rm和git ci等操作都合并在一起做  </span><br><span class="line">    git ci -am &quot;some comments&quot;  </span><br><span class="line">    git ci --amend       修改最后一次提交记录  </span><br><span class="line">       </span><br><span class="line">    git revert &lt;$id&gt;     恢复某次提交的状态，恢复动作本身也创建了一次提交对象  </span><br><span class="line">    git revert HEAD      恢复最后一次提交的状态</span><br></pre></td></tr></table></figure>
+<p>```xml<br>git help <command>   显示command的help<br>    git show             显示某次提交的内容<br>    git show $id  </p>
+<pre><code>git co  -- &lt;file&gt;    抛弃工作区修改  
+git co  .            抛弃工作区修改  
+
+git add &lt;file&gt;       将工作文件修改提交到本地暂存区  
+git add .            将所有修改过的工作文件提交暂存区  
+
+git rm &lt;file&gt;        从版本库中删除文件  
+git rm &lt;file&gt; --cached   从版本库中删除文件，但不删除文件  
+
+git reset &lt;file&gt;     从暂存区恢复到工作文件  
+git reset -- .       从暂存区恢复到工作文件  
+git reset --hard     恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改  
+
+git ci &lt;file&gt;  
+git ci .  
+git ci -a            将git add, git rm和git ci等操作都合并在一起做  
+git ci -am &quot;some comments&quot;  
+git ci --amend       修改最后一次提交记录  
+
+git revert &lt;$id&gt;     恢复某次提交的状态，恢复动作本身也创建了一次提交对象  
+git revert HEAD      恢复最后一次提交的状态  
+</code></pre><p>```xml</p>
 <ul>
 <li><strong><em>查看文件diff</em></strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;file&gt;      比较当前文件和暂存区文件差异  </span><br><span class="line">git diff  </span><br><span class="line">git diff &lt;$id1&gt; &lt;$id2&gt;    比较两次提交之间的差异  </span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;  在两个分支之间比较  </span><br><span class="line">git diff --staged    比较暂存区和版本库差异  </span><br><span class="line">git diff --cached    比较暂存区和版本库差异  </span><br><span class="line">git diff --stat      仅仅比较统计信息</span><br></pre></td></tr></table></figure>
+<p><code>xml
+git diff &lt;file&gt;      比较当前文件和暂存区文件差异  
+git diff  
+git diff &lt;$id1&gt; &lt;$id2&gt;    比较两次提交之间的差异  
+git diff &lt;branch1&gt;..&lt;branch2&gt;  在两个分支之间比较  
+git diff --staged    比较暂存区和版本库差异  
+git diff --cached    比较暂存区和版本库差异  
+git diff --stat      仅仅比较统计信息</code>xml</p>
 <ul>
 <li><strong><em>查看提交记录</em></strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git log  </span><br><span class="line">git log &lt;file&gt;       查看该文件每次提交记录  </span><br><span class="line">git log -p &lt;file&gt;    查看每次详细修改内容的diff  </span><br><span class="line">git log -p -2        查看最近两次详细修改内容的diff  </span><br><span class="line">git log --stat      查看提交统计信息</span><br></pre></td></tr></table></figure>
+<p><code>xml
+git log  
+git log &lt;file&gt;       查看该文件每次提交记录  
+git log -p &lt;file&gt;    查看每次详细修改内容的diff  
+git log -p -2        查看最近两次详细修改内容的diff  
+git log --stat      查看提交统计信息</code>xml</p>
 <ul>
 <li><strong><em>取得Git仓库</em></strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">初始化一个版本仓库  </span><br><span class="line">git init  </span><br><span class="line">  </span><br><span class="line">Clone远程版本库  </span><br><span class="line">git clone git@xbc.me:wordpress.git  </span><br><span class="line">  </span><br><span class="line">添加远程版本库origin，语法为 git remote add [shortname] [url]  </span><br><span class="line">git remote add origin git@xbc.me:wordpress.git  </span><br><span class="line">  </span><br><span class="line">查看远程仓库  </span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+<p>```xml<br>初始化一个版本仓库<br>git init  </p>
+<p>Clone远程版本库<br>git clone git@xbc.me:wordpress.git  </p>
+<p>添加远程版本库origin，语法为 git remote add [shortname] [url]<br>git remote add origin git@xbc.me:wordpress.git  </p>
+<p>查看远程仓库<br>git remote -v<br>```xml</p>
 <ul>
 <li><strong><em>提交你的修改</em></strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">添加当前修改的文件到暂存区  </span><br><span class="line">git add .  </span><br><span class="line">  </span><br><span class="line">如果你自动追踪文件，包括你已经手动删除的，状态为Deleted的文件  </span><br><span class="line">git add -u  </span><br><span class="line">  </span><br><span class="line">提交你的修改  </span><br><span class="line">git commit –m &quot;你的注释&quot;  </span><br><span class="line">  </span><br><span class="line">推送你的更新到远程服务器,语法为 git push [远程名] [本地分支]:[远程分支]  </span><br><span class="line">git push origin master  </span><br><span class="line">  </span><br><span class="line">查看文件状态  </span><br><span class="line">git status  </span><br><span class="line">  </span><br><span class="line">跟踪新文件  </span><br><span class="line">git add readme.txt  </span><br><span class="line">  </span><br><span class="line">从当前跟踪列表移除文件，并完全删除  </span><br><span class="line">git rm readme.txt  </span><br><span class="line">  </span><br><span class="line">仅在暂存区删除，保留文件在当前目录，不再跟踪  </span><br><span class="line">git rm –cached readme.txt  </span><br><span class="line">  </span><br><span class="line">重命名文件  </span><br><span class="line">git mv reademe.txt readme  </span><br><span class="line">  </span><br><span class="line">查看提交的历史记录  </span><br><span class="line">git log  </span><br><span class="line">  </span><br><span class="line">修改最后一次提交注释的，利用–amend参数  </span><br><span class="line">git commit --amend  </span><br><span class="line">  </span><br><span class="line">忘记提交某些修改，下面的三条命令只会得到一个提交。  </span><br><span class="line">git commit –m &amp;quot;add readme.txt&amp;quot;  </span><br><span class="line">git add readme_forgotten  </span><br><span class="line">git commit –amend  </span><br><span class="line">  </span><br><span class="line">假设你已经使用git add .，将修改过的文件a、b加到暂存区  </span><br><span class="line">  </span><br><span class="line">现在你只想提交a文件，不想提交b文件，应该这样  </span><br><span class="line">git reset HEAD b  </span><br><span class="line">  </span><br><span class="line">取消对文件的修改  </span><br><span class="line">git checkout –- readme.txt</span><br></pre></td></tr></table></figure>
+<p>```xml<br>添加当前修改的文件到暂存区<br>git add .  </p>
+<p>如果你自动追踪文件，包括你已经手动删除的，状态为Deleted的文件<br>git add -u  </p>
+<p>提交你的修改<br>git commit –m “你的注释”  </p>
+<p>推送你的更新到远程服务器,语法为 git push [远程名] [本地分支]:[远程分支]<br>git push origin master  </p>
+<p>查看文件状态<br>git status  </p>
+<p>跟踪新文件<br>git add readme.txt  </p>
+<p>从当前跟踪列表移除文件，并完全删除<br>git rm readme.txt  </p>
+<p>仅在暂存区删除，保留文件在当前目录，不再跟踪<br>git rm –cached readme.txt  </p>
+<p>重命名文件<br>git mv reademe.txt readme  </p>
+<p>查看提交的历史记录<br>git log  </p>
+<p>修改最后一次提交注释的，利用–amend参数<br>git commit –amend  </p>
+<p>忘记提交某些修改，下面的三条命令只会得到一个提交。<br>git commit –m &quot;add readme.txt&quot;<br>git add readme_forgotten<br>git commit –amend  </p>
+<p>假设你已经使用git add .，将修改过的文件a、b加到暂存区  </p>
+<p>现在你只想提交a文件，不想提交b文件，应该这样<br>git reset HEAD b  </p>
+<p>取消对文件的修改<br>git checkout –- readme.txt<br>```xml</p>
 <ul>
-<li><p><strong><em>基本的分支管理</em></strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">创建一个分支  </span><br><span class="line">git branch iss53  </span><br><span class="line">  </span><br><span class="line">切换工作目录到iss53  </span><br><span class="line">git chekcout iss53  </span><br><span class="line">  </span><br><span class="line">将上面的命令合在一起，创建iss53分支并切换到iss53  </span><br><span class="line">git chekcout –b iss53  </span><br><span class="line">  </span><br><span class="line">合并iss53分支，当前工作目录为master  </span><br><span class="line">git merge iss53  </span><br><span class="line">  </span><br><span class="line">合并完成后，没有出现冲突，删除iss53分支  </span><br><span class="line">git branch –d iss53  </span><br><span class="line">  </span><br><span class="line">拉去远程仓库的数据，语法为 git fetch [remote-name]  </span><br><span class="line">git fetch  </span><br><span class="line">  </span><br><span class="line">fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并  </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><em>Git远程分支管理</em></strong></p>
-</li>
+<li><strong><em>基本的分支管理</em></strong><br>```xml</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git pull                          抓取远程仓库所有分支更新并合并到本地  </span><br><span class="line">git pull --no-ff                  抓取远程仓库所有分支更新并合并到本地，不要快进合并  </span><br><span class="line">git fetch origin                  抓取远程仓库更新  </span><br><span class="line">git merge origin/master           将远程主分支合并到本地当前分支  </span><br><span class="line">git co --track origin/branch      跟踪某个远程分支创建相应的本地分支  </span><br><span class="line">git co -b &lt;local_branch&gt; origin/&lt;remote_branch&gt;   基于远程分支创建本地分支，功能同上  </span><br><span class="line">   </span><br><span class="line">git push                          push所有分支  </span><br><span class="line">git push origin master            将本地主分支推到远程主分支  </span><br><span class="line">git push -u origin master         将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)  </span><br><span class="line">git push origin &lt;local_branch&gt;    创建远程分支， origin是远程仓库名  </span><br><span class="line">git push origin &lt;local_branch&gt;:&lt;remote_branch&gt;   创建远程分支  </span><br><span class="line">git push origin :&lt;remote_branch&gt;  先删除本地分支(git br -d &lt;branch&gt;)，然后再push删除远程分支</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">查看远程仓库的信息  </span><br><span class="line">git remote show origin  </span><br><span class="line">  </span><br><span class="line">建立本地的dev分支追踪远程仓库的develop分支  </span><br><span class="line">git checkout –b dev origin/develop  </span><br><span class="line"> </span><br><span class="line">Git远程仓库管理</span><br><span class="line"></span><br><span class="line">git remote -v                     查看远程服务器地址和仓库名称  </span><br><span class="line">git remote show origin            查看远程服务器仓库状态  </span><br><span class="line">git remote add origin git@ github:robbin/robbin_site.git          添加远程仓库地址  </span><br><span class="line">git remote set-url origin git@ github.com:robbin/robbin_site.git  设置远程仓库地址(用于修改远程仓库地址)  </span><br><span class="line">git remote rm &lt;repository&gt;        删除远程仓库  </span><br><span class="line"> </span><br><span class="line">创建远程仓库</span><br><span class="line"></span><br><span class="line">git clone --bare robbin_site robbin_site.git   用带版本的项目创建纯版本仓库  </span><br><span class="line">scp -r my_project.git git@ git.csdn.net:~       将纯仓库上传到服务器上  </span><br><span class="line">   </span><br><span class="line">mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git --bare init  在服务器创建纯仓库  </span><br><span class="line">git remote add origin git@ github.com:robbin/robbin_site.git     设置远程仓库地址  </span><br><span class="line">git push -u origin master                                       客户端首次提交  </span><br><span class="line">git push -u origin develop   首次将本地develop分支提交到远程develop分支，并且track  </span><br><span class="line">   </span><br><span class="line">git remote set-head origin master    设置远程仓库的HEAD指向master分支  </span><br><span class="line"> </span><br><span class="line">也可以命令设置跟踪远程库和本地库</span><br><span class="line"></span><br><span class="line">git branch --set-upstream master origin/master  </span><br><span class="line">git branch --set-upstream develop origin/develop</span><br></pre></td></tr></table></figure>
+<p>创建一个分支<br>git branch iss53  </p>
+<p>切换工作目录到iss53<br>git chekcout iss53  </p>
+<p>将上面的命令合在一起，创建iss53分支并切换到iss53<br>git chekcout –b iss53  </p>
+<p>合并iss53分支，当前工作目录为master<br>git merge iss53  </p>
+<p>合并完成后，没有出现冲突，删除iss53分支<br>git branch –d iss53  </p>
+<p>拉去远程仓库的数据，语法为 git fetch [remote-name]<br>git fetch  </p>
+<p>fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并<br>git pull<br>```xml</p>
+<ul>
+<li><strong><em>Git远程分支管理</em></strong></li>
+</ul>
+<p>```xml<br>git pull                          抓取远程仓库所有分支更新并合并到本地<br>git pull –no-ff                  抓取远程仓库所有分支更新并合并到本地，不要快进合并<br>git fetch origin                  抓取远程仓库更新<br>git merge origin/master           将远程主分支合并到本地当前分支<br>git co –track origin/branch      跟踪某个远程分支创建相应的本地分支<br>git co -b <local_branch> origin/<remote_branch>   基于远程分支创建本地分支，功能同上  </remote_branch></local_branch></p>
+<p>git push                          push所有分支<br>git push origin master            将本地主分支推到远程主分支<br>git push -u origin master         将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)<br>git push origin <local_branch>    创建远程分支， origin是远程仓库名<br>git push origin <local_branch>:<remote_branch>   创建远程分支<br>git push origin :<remote_branch>  先删除本地分支(git br -d <branch>)，然后再push删除远程分支<br>```xml</branch></remote_branch></remote_branch></local_branch></local_branch></p>
+<p>```xml<br>查看远程仓库的信息<br>git remote show origin  </p>
+<p>建立本地的dev分支追踪远程仓库的develop分支<br>git checkout –b dev origin/develop  </p>
+<p>Git远程仓库管理</p>
+<p>git remote -v                     查看远程服务器地址和仓库名称<br>git remote show origin            查看远程服务器仓库状态<br>git remote add origin git@ github:robbin/robbin_site.git          添加远程仓库地址<br>git remote set-url origin git@ github.com:robbin/robbin_site.git  设置远程仓库地址(用于修改远程仓库地址)<br>git remote rm <repository>        删除远程仓库  </repository></p>
+<p>创建远程仓库</p>
+<p>git clone –bare robbin_site robbin_site.git   用带版本的项目创建纯版本仓库<br>scp -r my_project.git git@ git.csdn.net:~       将纯仓库上传到服务器上  </p>
+<p>mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git –bare init  在服务器创建纯仓库<br>git remote add origin git@ github.com:robbin/robbin_site.git     设置远程仓库地址<br>git push -u origin master                                       客户端首次提交<br>git push -u origin develop   首次将本地develop分支提交到远程develop分支，并且track  </p>
+<p>git remote set-head origin master    设置远程仓库的HEAD指向master分支  </p>
+<p>也可以命令设置跟踪远程库和本地库</p>
+<p>git branch –set-upstream master origin/master<br>git branch –set-upstream develop origin/develop<br>```xml</p>
 
       
     </div>
