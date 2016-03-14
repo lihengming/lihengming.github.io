@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>土豆的博客</title>
+  <title>git | 土豆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="土豆的博客">
-<meta property="og:url" content="http://potato.coding.io/index.html">
+  <meta name="description" content="git常用命令收集
+&amp;lt;!--more---&amp;gt;
+
+初始化配置
+
+123456789101112131415161718192021配置使用git仓库的人员姓名  git config --global user.name &amp;quot;Your Name Comes Here&amp;quot;    配置使用git仓库的人员email  git config --global user.emai">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://potato.coding.io/2016/03/14/git/index.html">
 <meta property="og:site_name" content="土豆的博客">
-<meta property="og:description">
+<meta property="og:description" content="git常用命令收集
+&amp;lt;!--more---&amp;gt;
+
+初始化配置
+
+123456789101112131415161718192021配置使用git仓库的人员姓名  git config --global user.name &amp;quot;Your Name Comes Here&amp;quot;    配置使用git仓库的人员email  git config --global user.emai">
+<meta property="og:updated_time" content="2016-03-14T06:42:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="土豆的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="git常用命令收集
+&amp;lt;!--more---&amp;gt;
+
+初始化配置
+
+123456789101112131415161718192021配置使用git仓库的人员姓名  git config --global user.name &amp;quot;Your Name Comes Here&amp;quot;    配置使用git仓库的人员email  git config --global user.emai">
   
     <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
   
@@ -28,13 +44,8 @@
   
   <link rel="stylesheet" href="/css/style.css">
   
-      <style> .article { opacity: 0;} </style>
-  
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-    
-    
   
   
     <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -44,8 +55,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -216,9 +227,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/03/14/git/" class="article-date">
@@ -234,12 +243,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/14/git/">git</a>
+    <h1 class="article-title" itemprop="name">
+      git
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/速查/">速查</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/命令/">命令</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -284,236 +308,111 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/速查/">速查</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/命令/">命令</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-mybaits-betch-sql" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/14/mybaits-betch-sql/" class="article-date">
-      <time datetime="2016-03-14T03:54:07.000Z" itemprop="datePublished">2016-03-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p> <strong>批量插入</strong><br>批量插入mysql和oracle的sql会有些差别，要注意！</p>
-<p>mysql：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"batchInsert"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.List"</span>&gt;</span></span><br><span class="line">       insert into user(username, password) values</span><br><span class="line">       <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span></span><br><span class="line">           <span class="attr">separator</span>=<span class="string">","</span>&gt;</span></span><br><span class="line">           (#&#123;item.username&#125;,</span><br><span class="line">           #&#123;item.password&#125; )</span><br><span class="line">       <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MyBatis/">MyBatis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/14/mybaits-betch-sql/#more">more >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/03/14/git/">git</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Potato 的个人博客">Potato</a></p>
+        <p><span>发布时间:</span>2016年03月14日 - 14时42分</p>
+        <p><span>最后更新:</span>2016年03月14日 - 14时42分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/14/git/" title="git">http://potato.coding.io/2016/03/14/git/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://potato.coding.io/2016/03/14/git/　　作者: Potato" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-struts2-constant" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/14/struts2-constant/" class="article-date">
-      <time datetime="2016-03-14T02:34:25.000Z" itemprop="datePublished">2016-03-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="meta">&lt;!DOCTYPE struts PUBLIC</span><br><span class="line">    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"</span><br><span class="line">    "http://struts.apache.org/dtds/struts-2.3.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 把它设置为开发模式，发布时要设置为false --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.devMode"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置在class被修改时是否热加载，发布时要设置为false --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.convention.classes.reload"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 自动动态方法的调用，使用这个设置后可以这样调用：action!method --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.enable.DynamicMethodInvocation"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 指定jsp文件所在的目录地址 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.convention.result.path"</span> <span class="attr">value</span>=<span class="string">"/WEB-INF/content/"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 使用struts-default默认的转换器，如果是rest的使用：rest-default，rest需要rest的jar插件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.convention.default.parent.package"</span> <span class="attr">value</span>=<span class="string">"struts-default"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 用于配置包名后缀。默认为action、actions、struts--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.convention.package.locators"</span> <span class="attr">value</span>=<span class="string">"actions"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 用于配置类名后缀，默认为Action，设置后，Struts2只会去找这种后缀名的类做映射 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.convention.action.suffix"</span> <span class="attr">value</span>=<span class="string">"Action"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 设置即使没有@Action注释，依然创建Action映射。默认值是false。因为Convention-Plugin是约定优于配置的风格，</span><br><span class="line">        可以不通过注解根据预先的定义就能访问相应Action中的方法 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.convention.action.mapAllMatches"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 自定义jsp文件命名的分隔符 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.convention.action.name.separator"</span> <span class="attr">value</span>=<span class="string">"-"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 国际化资源文件名称 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.custom.i18n.resources"</span> <span class="attr">value</span>=<span class="string">"i18n"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 是否自动加载国际化资源文件  --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.i18n.reload"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 浏览器是否缓存静态内容 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.serve.static.browserCache"</span> <span class="attr">value</span>=<span class="string">"false"</span> /&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 上传文件大小限制设置 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.multipart.maxSize"</span> <span class="attr">value</span>=<span class="string">"-1"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 主题，将值设置为simple，即不使用UI模板。这将不会生成额外的html标签 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.ui.theme"</span> <span class="attr">value</span>=<span class="string">"simple"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 编码格式 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.i18n.encoding"</span> <span class="attr">value</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/速查/">速查</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/struts2/">struts2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置文件/">配置文件</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/14/struts2-constant/#more">more >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
-  
-</article>
 
 
 
-
-
-
-
-
-  
-    <article id="post-callback" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/11/callback/" class="article-date">
-      <time datetime="2016-03-11T05:53:19.000Z" itemprop="datePublished">2016-03-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <nav id="article-nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a>
-    </h1>
-  
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/03/14/mybaits-betch-sql/">
+                    MyBatis中的批量插入、删除(MySql、Oracle)
+                </a>
+            </div>
+        
+    </nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <blockquote>
-<p><em>在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。</em></p>
-</blockquote>
-<p>上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Callback/">Callback</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回调函数/">回调函数</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/11/callback/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
 
+    <div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+        <section class="youyan" id="comments">
+  <div id="uyan_frame"></div>
+  <script src="http://v2.uyan.cc/code/uyan.js?uid=2087817"></script>
+</section>
+
+    
 
 
 
 
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/03/14/mybaits-betch-sql/" title="下一篇: MyBatis中的批量插入、删除(MySql、Oracle)">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/git/">git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a></li></ul>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
-  
-  
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
