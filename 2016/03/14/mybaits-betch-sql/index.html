@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | 土豆的博客</title>
+  <title>MyBatis中的批量插入、删除(MySql、Oracle) | 土豆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="批量插入批量插入mysql和oracle的sql会有些差别，要注意！
+mysql：12345678&amp;lt;insert id=&quot;batchInsert&quot; parameterType=&quot;java.util.List&quot;&amp;gt;       insert into user(username, password) values       &amp;lt;foreach collection=&quot;list&quot; i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://potato.coding.io/2016/03/10/hello-world/index.html">
+<meta property="og:title" content="MyBatis中的批量插入、删除(MySql、Oracle)">
+<meta property="og:url" content="http://potato.coding.io/2016/03/14/mybaits-betch-sql/index.html">
 <meta property="og:site_name" content="土豆的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-03-10T06:43:20.266Z">
+<meta property="og:description" content="批量插入批量插入mysql和oracle的sql会有些差别，要注意！
+mysql：12345678&amp;lt;insert id=&quot;batchInsert&quot; parameterType=&quot;java.util.List&quot;&amp;gt;       insert into user(username, password) values       &amp;lt;foreach collection=&quot;list&quot; i">
+<meta property="og:updated_time" content="2016-03-14T03:54:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="MyBatis中的批量插入、删除(MySql、Oracle)">
+<meta name="twitter:description" content="批量插入批量插入mysql和oracle的sql会有些差别，要注意！
+mysql：12345678&amp;lt;insert id=&quot;batchInsert&quot; parameterType=&quot;java.util.List&quot;&amp;gt;       insert into user(username, password) values       &amp;lt;foreach collection=&quot;list&quot; i">
   
     <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
   
@@ -215,11 +215,11 @@ Quick">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-mybaits-betch-sql" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/10/hello-world/" class="article-date">
-      <time datetime="2016-03-10T06:42:54.800Z" itemprop="datePublished">2016-03-10</time>
+      <a href="/2016/03/14/mybaits-betch-sql/" class="article-date">
+      <time datetime="2016-03-14T03:54:07.000Z" itemprop="datePublished">2016-03-14</time>
 </a>
     </div>
   
@@ -232,7 +232,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      MyBatis中的批量插入、删除(MySql、Oracle)
     </h1>
   
 
@@ -240,8 +240,16 @@ Quick">
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MyBatis/">MyBatis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -249,15 +257,15 @@ Quick">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p> <strong>批量插入</strong><br>批量插入mysql和oracle的sql会有些差别，要注意！</p>
+<p>mysql：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"batchInsert"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.List"</span>&gt;</span></span><br><span class="line">       insert into user(username, password) values</span><br><span class="line">       <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span></span><br><span class="line">           <span class="attr">separator</span>=<span class="string">","</span>&gt;</span></span><br><span class="line">           (#&#123;item.username&#125;,</span><br><span class="line">           #&#123;item.password&#125; )</span><br><span class="line">       <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>oracle：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"batchInsert"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.List"</span>&gt;</span></span><br><span class="line">    insert into user(username, password) </span><br><span class="line">    <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">close</span>=<span class="string">")"</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span> <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">separator</span>=<span class="string">"union"</span>&gt;</span></span><br><span class="line">        select</span><br><span class="line">        #&#123;item.username,jdbcType=VARCHAR&#125;,</span><br><span class="line">        #&#123;item.password,jdbcType=VARCHAR&#125;</span><br><span class="line">        from dual</span><br><span class="line">    <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>下面的是Oracle使用 Sequence来生成主键的批量插入写法</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"batchInsert"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.List"</span>&gt;</span></span><br><span class="line">    insert into user(id, username, password)</span><br><span class="line">       select SEQ_USER_ID.NEXTVAL,T.* from(</span><br><span class="line">       <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span></span><br><span class="line">           <span class="attr">separator</span>=<span class="string">"UNION"</span>&gt;</span></span><br><span class="line">           SELECT</span><br><span class="line">        	  #&#123;item.username,jdbcType=VARCHAR&#125;,</span><br><span class="line">     		  #&#123;item.password,jdbcType=VARCHAR&#125;</span><br><span class="line">           from dual </span><br><span class="line">            <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">       ) T</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> <strong>批量删除</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">"batchDeleteByIdList"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.List"</span>&gt;</span></span><br><span class="line">    delete from user</span><br><span class="line">    where id in</span><br><span class="line">	<span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">"id"</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">separator</span>=<span class="string">","</span> <span class="attr">close</span>=<span class="string">")"</span>&gt;</span></span><br><span class="line">	#&#123;id&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当然，也可以使用Array来替代List，修改parameterType=“array”和collection=”array”即可 </p>
 
       
     </div>
@@ -266,13 +274,13 @@ Quick">
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/10/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Potato 的个人博客">Potato</a></p>
-        <p><span>发布时间:</span>2016年03月10日 - 14时42分</p>
-        <p><span>最后更新:</span>2016年03月10日 - 14时43分</p>
+        <p><span>发布时间:</span>2016年03月14日 - 11时54分</p>
+        <p><span>最后更新:</span>2016年03月14日 - 11时54分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/10/hello-world/" title="Hello World">http://potato.coding.io/2016/03/10/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://potato.coding.io/2016/03/10/hello-world/　　作者: Potato" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/14/mybaits-betch-sql/" title="MyBatis中的批量插入、删除(MySql、Oracle)">http://potato.coding.io/2016/03/14/mybaits-betch-sql/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://potato.coding.io/2016/03/14/mybaits-betch-sql/　　作者: Potato" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -285,12 +293,12 @@ Quick">
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/11/callback/">
-                    关于Java 中回调函数的一些理解及与JavaScript的对比
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/03/14/struts2-constant/">
+                    Struts2 - 常用的constant配置
                 </a>
             </div>
-        
         
     </nav>
 
@@ -328,15 +336,15 @@ Quick">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/11/callback/" title="上一篇: 关于Java 中回调函数的一些理解及与JavaScript的对比">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/03/14/struts2-constant/" title="下一篇: Struts2 - 常用的constant配置">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 

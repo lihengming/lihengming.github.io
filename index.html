@@ -146,7 +146,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Callback/" style="font-size: 10px;">Callback</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/struts2/" style="font-size: 10px;">struts2</a> <a href="/tags/回调函数/" style="font-size: 10px;">回调函数</a> <a href="/tags/配置文件/" style="font-size: 10px;">配置文件</a>
+                        <a href="/tags/Callback/" style="font-size: 10px;">Callback</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/struts2/" style="font-size: 10px;">struts2</a> <a href="/tags/回调函数/" style="font-size: 10px;">回调函数</a> <a href="/tags/配置文件/" style="font-size: 10px;">配置文件</a>
                     </div>
                 </section>
                 
@@ -217,6 +217,72 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-mybaits-betch-sql" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/14/mybaits-betch-sql/" class="article-date">
+      <time datetime="2016-03-14T03:54:07.000Z" itemprop="datePublished">2016-03-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p> <strong>批量插入</strong><br>批量插入mysql和oracle的sql会有些差别，要注意！</p>
+<p>mysql：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"batchInsert"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.List"</span>&gt;</span></span><br><span class="line">       insert into user(username, password) values</span><br><span class="line">       <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span></span><br><span class="line">           <span class="attr">separator</span>=<span class="string">","</span>&gt;</span></span><br><span class="line">           (#&#123;item.username&#125;,</span><br><span class="line">           #&#123;item.password&#125; )</span><br><span class="line">       <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MyBatis/">MyBatis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/14/mybaits-betch-sql/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-struts2-constant" class="article article-type-post" itemscope itemprop="blogPost">
   
