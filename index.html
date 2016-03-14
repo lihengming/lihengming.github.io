@@ -245,9 +245,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p> <strong>批量插入</strong><br>批量插入mysql和oracle的sql会有些差别，要注意！</p>
+        <a id="more"></a>
+<p> <strong>批量插入</strong><br>批量插入mysql和oracle的sql会有些差别，要注意！</p>
 <p>mysql：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;insert id=&quot;batchInsert&quot; parameterType=&quot;java.util.List&quot;&gt;</span><br><span class="line">       insert into user(username, password) values</span><br><span class="line">       &lt;foreach collection=&quot;list&quot; item=&quot;item&quot; index=&quot;index&quot;</span><br><span class="line">           separator=&quot;,&quot;&gt;</span><br><span class="line">           (#&#123;item.username&#125;,</span><br><span class="line">           #&#123;item.password&#125; )</span><br><span class="line">       &lt;/foreach&gt;</span><br><span class="line">   &lt;/insert&gt;</span><br></pre></td></tr></table></figure></p>
-          
+<p>oracle：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> &lt;insert id=&quot;batchInsert&quot; parameterType=&quot;java.util.List&quot;&gt;</span><br><span class="line">    insert into user(username, password) </span><br><span class="line">    &lt;foreach close=&quot;)&quot; collection=&quot;list&quot; item=&quot;item&quot; index=&quot;index&quot; open=&quot;(&quot; separator=&quot;union&quot;&gt;</span><br><span class="line">        select</span><br><span class="line">        #&#123;item.username,jdbcType=VARCHAR&#125;,</span><br><span class="line">        #&#123;item.password,jdbcType=VARCHAR&#125;</span><br><span class="line">        from dual</span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/insert&gt;</span><br></pre></td></tr></table></figure></p>
+<p>下面的是Oracle使用 Sequence来生成主键的批量插入写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;insert id=&quot;batchInsert&quot; parameterType=&quot;java.util.List&quot;&gt;</span><br><span class="line">    insert into user(id, username, password)</span><br><span class="line">       select SEQ_USER_ID.NEXTVAL,T.* from(</span><br><span class="line">       &lt;foreach collection=&quot;list&quot; item=&quot;item&quot; index=&quot;index&quot;</span><br><span class="line">           separator=&quot;UNION&quot;&gt;</span><br><span class="line">           SELECT</span><br><span class="line">        	  #&#123;item.username,jdbcType=VARCHAR&#125;,</span><br><span class="line">     		  #&#123;item.password,jdbcType=VARCHAR&#125;</span><br><span class="line">           from dual </span><br><span class="line">            &lt;/foreach&gt;</span><br><span class="line">       ) T</span><br><span class="line">&lt;/insert&gt;</span><br></pre></td></tr></table></figure>
+<p> <strong>批量删除</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;delete id=&quot;batchDeleteByIdList&quot; parameterType=&quot;java.util.List&quot;&gt;</span><br><span class="line">    delete from user</span><br><span class="line">    where id in</span><br><span class="line">	&lt;foreach item=&quot;id&quot; collection=&quot;list&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;</span><br><span class="line">	#&#123;id&#125;</span><br><span class="line">	&lt;/foreach&gt;</span><br><span class="line">  &lt;/delete&gt;</span><br></pre></td></tr></table></figure>
+<p>当然，也可以使用Array来替代List，修改parameterType=“array”和collection=”array”即可 </p>
+
       
     </div>
     
@@ -256,10 +263,6 @@
       
 
       
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/14/mybaits-betch-sql/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
