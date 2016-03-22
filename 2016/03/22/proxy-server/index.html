@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Java | 土豆的博客</title>
+  <title>服务器的正向代理与反向代理 | 土豆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="土豆的博客">
-<meta property="og:url" content="http://potato.coding.io/tags/Java/index.html">
+  <meta name="description" content="最近接触到Nginx对正向代理，反向代理的概念比较模糊，经过搜索引擎的帮助，大致明白这里所谓的正向、反向指的是访问服务器时网域的正向和反向（即内网客户端通过代理访问外网服务器与外网客户端通过代理访问内网服务器的区别）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务器的正向代理与反向代理">
+<meta property="og:url" content="http://potato.coding.io/2016/03/22/proxy-server/index.html">
 <meta property="og:site_name" content="土豆的博客">
-<meta property="og:description">
+<meta property="og:description" content="最近接触到Nginx对正向代理，反向代理的概念比较模糊，经过搜索引擎的帮助，大致明白这里所谓的正向、反向指的是访问服务器时网域的正向和反向（即内网客户端通过代理访问外网服务器与外网客户端通过代理访问内网服务器的区别）。">
+<meta property="og:image" content="http://7xrrpf.com1.z0.glb.clouddn.com/2016-3-22d3547817164b5f21c83d6d14.jpg">
+<meta property="og:updated_time" content="2016-03-22T01:37:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="土豆的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="服务器的正向代理与反向代理">
+<meta name="twitter:description" content="最近接触到Nginx对正向代理，反向代理的概念比较模糊，经过搜索引擎的帮助，大致明白这里所谓的正向、反向指的是访问服务器时网域的正向和反向（即内网客户端通过代理访问外网服务器与外网客户端通过代理访问内网服务器的区别）。">
+<meta name="twitter:image" content="http://7xrrpf.com1.z0.glb.clouddn.com/2016-3-22d3547817164b5f21c83d6d14.jpg">
   
     <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
   
@@ -40,9 +43,9 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
+          isPost: true,
           isArchive: false,
-          isTag: true,
+          isTag: false,
           isCategory: false,
           open_in_new: false,
       }
@@ -215,58 +218,163 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-proxy-server" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/03/11/callback/" class="archive-article-date">
-      <time datetime="2016-03-11T05:53:19.000Z" itemprop="datePublished">03-11</time>
+    <div class="article-meta">
+      <a href="/2016/03/22/proxy-server/" class="article-date">
+      <time datetime="2016-03-22T01:37:11.000Z" itemprop="datePublished">2016-03-22</time>
 </a>
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      服务器的正向代理与反向代理
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/技术/">技术</a>
     </div>
 
 
-          
+        
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Callback/">Callback</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回调函数/">回调函数</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代理服务器/">代理服务器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反向代理/">反向代理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/负载均衡/">负载均衡</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>最近接触到Nginx对正向代理，反向代理的概念比较模糊，经过搜索引擎的帮助，大致明白这里所谓的正向、反向指的是访问服务器时网域的正向和反向（即内网客户端通过代理访问外网服务器与外网客户端通过代理访问内网服务器的区别）。</p>
+</blockquote>
+<a id="more"></a>
+<h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>　　通常的代理服务器，只用于代理内部网络对Internet的连接请求，客户机必须指定代理服务器,并将本来要直接发送到Web服务器上的http请求发送到代理服务器中。由于外部网络上的主机并不会配置并使用这个代理服务器，普通代理服务器也被设计为在Internet上搜寻多个不确定的服务器,而不是针对Internet上多个客户机的请求访问某一个固定的服务器，因此普通的Web代理服务器不支持外部对内部网络的访问请求。当一个代理服务器能够代理外部网络上的主机，访问内部网络时，这种代理服务的方式称为反向代理服务。此时代理服务器对外就表现为一个Web服务器，外部网络就可以简单把它当作一个标准的Web服务器而不需要特定的配置。不同之处在于，这个服务器没有保存任何网页的真实数据，所有的静态网页或者CGI程序，都保存在内部的Web服务器上。因此对反向代理服务器的攻击并不会使得网页信息遭到破坏，这样就增强了Web服务器的安全性。反向代理方式和包过滤方式或普通代理方式并无冲突，因此可以在防火墙设备中同时使用这两种方式，其中反向代理用于外部网络访问内部网络时使用，正向代理或包过滤方式用于拒绝其他外部访问方式并提供内部网络对外部网络的访问能力。因此可以结合这些方式提供最佳的安全访问方式。</p>
+<h4 id="为何叫反向"><a href="#为何叫反向" class="headerlink" title="为何叫反向"></a>为何叫反向</h4><p>　　反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。<br>　　但是这也没法解释为何他叫反向，从原理上来说.代理服务器都是处理来自客户端的请求，并将其转发到目的服务器上，所以代理服务器的工作并没有任何反向的意味，而下面这张图就能说明为何反向代理叫反向<br><img src="http://7xrrpf.com1.z0.glb.clouddn.com/2016-3-22d3547817164b5f21c83d6d14.jpg" alt="代理服务器结构图"><br>　　从结构上来看，正向代理和反向代理的左右两边换了一下，原本代理服务器的客户端来自内网.其和代理服务器组成一个LAN，而反向代理之后.代理服务器和服务器组成了一组.所以从结构来看,是reverse的，从英文的角度来看，reverse这个词包含翻转的意思,其意思就是指结构图上的这种反转，但是由于翻译的关系.到了中文变成反向代理.其实proxy并没有做和以前有什么不同的事情.它仍旧是将来自客户端的请求转发给实际端.，而时至今日,由于CDN的大量使用,反向代理后面的服务器为了适应这种跨网络的架构，而均采用实际IP地址.这样就往往更不容易使得大家对”反向代理这个名词中的反向到底指什么”这个问题有个清晰的答案了。</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/03/22/proxy-server/">服务器的正向代理与反向代理</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Potato 的个人博客">Potato</a></p>
+        <p><span>发布时间:</span>2016年03月22日 - 09时37分</p>
+        <p><span>最后更新:</span>2016年03月22日 - 09时37分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/22/proxy-server/" title="服务器的正向代理与反向代理">http://potato.coding.io/2016/03/22/proxy-server/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://potato.coding.io/2016/03/22/proxy-server/　　作者: Potato" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/03/14/git/">
+                    Git 常用命令
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+    <div class="share">
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+    <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+    <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+    
+        <section class="youyan" id="comments">
+  <div id="uyan_frame"></div>
+  <script src="http://v2.uyan.cc/code/uyan.js?uid=2087817"></script>
+</section>
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/03/14/git/" title="下一篇: Git 常用命令">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/proxy-server/">服务器的正向代理与反向代理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/git/">Git 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a></li></ul>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
@@ -337,15 +445,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 
     <script src="//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
