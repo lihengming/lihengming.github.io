@@ -3,26 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于Java 中回调函数的一些理解及与JavaScript的对比 | 土豆的博客</title>
+  <title>土豆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
+  <meta name="description" content="title: 关于Java 中回调函数的一些理解及与JavaScript的对比date: 2016-3-11 13:53:19tag: [Java,JavaScript,Callback,回调函数]
+categories: 技术
+在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
 
-上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。">
+上面这段是比较官方">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于Java 中回调函数的一些理解及与JavaScript的对比">
+<meta property="og:title" content="土豆的博客">
 <meta property="og:url" content="http://potato.coding.io/2016/03/11/callback/index.html">
 <meta property="og:site_name" content="土豆的博客">
-<meta property="og:description" content="在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
+<meta property="og:description" content="title: 关于Java 中回调函数的一些理解及与JavaScript的对比date: 2016-3-11 13:53:19tag: [Java,JavaScript,Callback,回调函数]
+categories: 技术
+在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
 
-上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。">
-<meta property="og:image" content="http://7xrrpf.com1.z0.glb.clouddn.com/2016%2F3%2F11Koala.jpg">
-<meta property="og:updated_time" content="2016-03-14T05:08:00.047Z">
+上面这段是比较官方">
+<meta property="og:updated_time" content="2016-03-22T09:42:07.897Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于Java 中回调函数的一些理解及与JavaScript的对比">
-<meta name="twitter:description" content="在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
+<meta name="twitter:title" content="土豆的博客">
+<meta name="twitter:description" content="title: 关于Java 中回调函数的一些理解及与JavaScript的对比date: 2016-3-11 13:53:19tag: [Java,JavaScript,Callback,回调函数]
+categories: 技术
+在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
 
-上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。">
-<meta name="twitter:image" content="http://7xrrpf.com1.z0.glb.clouddn.com/2016%2F3%2F11Koala.jpg">
+上面这段是比较官方">
   
     <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
   
@@ -152,7 +156,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Callback/" style="font-size: 10px;">Callback</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/struts2/" style="font-size: 10px;">struts2</a> <a href="/tags/代理服务器/" style="font-size: 10px;">代理服务器</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/回调函数/" style="font-size: 10px;">回调函数</a> <a href="/tags/负载均衡/" style="font-size: 10px;">负载均衡</a> <a href="/tags/配置文件/" style="font-size: 10px;">配置文件</a>
+                        <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/struts2/" style="font-size: 10px;">struts2</a> <a href="/tags/代理服务器/" style="font-size: 10px;">代理服务器</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/负载均衡/" style="font-size: 10px;">负载均衡</a> <a href="/tags/配置文件/" style="font-size: 10px;">配置文件</a>
                     </div>
                 </section>
                 
@@ -228,7 +232,7 @@
   
     <div class="article-meta">
       <a href="/2016/03/11/callback/" class="article-date">
-      <time datetime="2016-03-11T05:53:19.000Z" itemprop="datePublished">2016-03-11</time>
+      <time datetime="2016-03-11T05:33:42.636Z" itemprop="datePublished">2016-03-11</time>
 </a>
     </div>
   
@@ -237,36 +241,12 @@
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      关于Java 中回调函数的一些理解及与JavaScript的对比
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Callback/">Callback</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回调函数/">回调函数</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
+        <hr>
+<p>title: 关于Java 中回调函数的一些理解及与JavaScript的对比<br>date: 2016-3-11 13:53:19<br>tag: [Java,JavaScript,Callback,回调函数]</p>
+<h2 id="categories-技术"><a href="#categories-技术" class="headerlink" title="categories: 技术"></a>categories: 技术</h2><blockquote>
 <p><em>在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。</em></p>
 </blockquote>
 <p>上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。</p>
@@ -283,7 +263,6 @@
 <p>输出和上面的一样。</p>
 <p>在Java中使用回调函数和代理模式有点相似，都是将重复的代码抽象出来，然后由调用者来回调各自不同的逻辑处理代码。</p>
 <p><strong>个人总结</strong>：回调函数就是把一段代码传递到调用者的方法内，然后执行这段代码。</p>
-<p> <img src="http://7xrrpf.com1.z0.glb.clouddn.com/2016%2F3%2F11Koala.jpg" alt="测试图片"></p>
 
       
     </div>
@@ -292,12 +271,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/11/callback/"></a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Potato 的个人博客">Potato</a></p>
-        <p><span>发布时间:</span>2016年03月11日 - 13时53分</p>
-        <p><span>最后更新:</span>2016年03月14日 - 13时08分</p>
+        <p><span>发布时间:</span>2016年03月11日 - 13时33分</p>
+        <p><span>最后更新:</span>2016年03月22日 - 17时42分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/11/callback/" title="关于Java 中回调函数的一些理解及与JavaScript的对比">http://potato.coding.io/2016/03/11/callback/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/11/callback/" title="">http://potato.coding.io/2016/03/11/callback/</a>
             <span class="copy-path" data-clipboard-text="原文: http://potato.coding.io/2016/03/11/callback/　　作者: Potato" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -366,7 +345,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/proxy-server/">服务器的正向代理与反向代理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/git/">Git 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/proxy-server/">服务器的正向代理与反向代理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/git/">Git 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/callback/">callback</a></li></ul>
     <script>
         $(".post-list").addClass("toc-article");
         $(".post-list-item a").attr("target","_blank");
