@@ -3,30 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>土豆的博客</title>
+  <title>关于Java 中回调函数的一些理解及与JavaScript的对比 | 土豆的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: 关于Java 中回调函数的一些理解及与JavaScript的对比date: 2016-3-11 13:53:19tag: [Java,JavaScript,Callback,回调函数]
-categories: 技术
-在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
+  <meta name="description" content="在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
 
-上面这段是比较官方">
+上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="土豆的博客">
+<meta property="og:title" content="关于Java 中回调函数的一些理解及与JavaScript的对比">
 <meta property="og:url" content="http://potato.coding.io/2016/03/11/callback/index.html">
 <meta property="og:site_name" content="土豆的博客">
-<meta property="og:description" content="title: 关于Java 中回调函数的一些理解及与JavaScript的对比date: 2016-3-11 13:53:19tag: [Java,JavaScript,Callback,回调函数]
-categories: 技术
-在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
+<meta property="og:description" content="在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
 
-上面这段是比较官方">
-<meta property="og:updated_time" content="2016-03-22T09:42:07.897Z">
+上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。">
+<meta property="og:updated_time" content="2016-03-22T09:44:21.531Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="土豆的博客">
-<meta name="twitter:description" content="title: 关于Java 中回调函数的一些理解及与JavaScript的对比date: 2016-3-11 13:53:19tag: [Java,JavaScript,Callback,回调函数]
-categories: 技术
-在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
+<meta name="twitter:title" content="关于Java 中回调函数的一些理解及与JavaScript的对比">
+<meta name="twitter:description" content="在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。
 
-上面这段是比较官方">
+上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。">
   
     <link rel="alternative" href="/atom.xml" title="土豆的博客" type="application/atom+xml">
   
@@ -156,7 +150,7 @@ categories: 技术
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/struts2/" style="font-size: 10px;">struts2</a> <a href="/tags/代理服务器/" style="font-size: 10px;">代理服务器</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/负载均衡/" style="font-size: 10px;">负载均衡</a> <a href="/tags/配置文件/" style="font-size: 10px;">配置文件</a>
+                        <a href="/tags/Callback/" style="font-size: 10px;">Callback</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MyBatis/" style="font-size: 10px;">MyBatis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/struts2/" style="font-size: 10px;">struts2</a> <a href="/tags/代理服务器/" style="font-size: 10px;">代理服务器</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/命令/" style="font-size: 10px;">命令</a> <a href="/tags/回调函数/" style="font-size: 10px;">回调函数</a> <a href="/tags/负载均衡/" style="font-size: 10px;">负载均衡</a> <a href="/tags/配置文件/" style="font-size: 10px;">配置文件</a>
                     </div>
                 </section>
                 
@@ -232,7 +226,7 @@ categories: 技术
   
     <div class="article-meta">
       <a href="/2016/03/11/callback/" class="article-date">
-      <time datetime="2016-03-11T05:33:42.636Z" itemprop="datePublished">2016-03-11</time>
+      <time datetime="2016-03-11T05:53:19.000Z" itemprop="datePublished">2016-03-11</time>
 </a>
     </div>
   
@@ -241,16 +235,40 @@ categories: 技术
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于Java 中回调函数的一些理解及与JavaScript的对比
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/技术/">技术</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Callback/">Callback</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回调函数/">回调函数</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <hr>
-<p>title: 关于Java 中回调函数的一些理解及与JavaScript的对比<br>date: 2016-3-11 13:53:19<br>tag: [Java,JavaScript,Callback,回调函数]</p>
-<h2 id="categories-技术"><a href="#categories-技术" class="headerlink" title="categories: 技术"></a>categories: 技术</h2><blockquote>
+        <blockquote>
 <p><em>在计算机程序设计中，回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。这一设计允许了底层代码调用在高层定义的子程序。</em></p>
 </blockquote>
 <p>上面这段是比较官方的定义，我觉得把”回调函数”称呼为”函数传递”、“方法传递”或“代码传递”,更加容易理解一些。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>在JavaScript会中更能诠释这一点,也更好理解一些。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用者Caller</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">caller</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">	<span class="comment">//其他代码逻辑块</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'caller：其他代码逻辑块'</span>);</span><br><span class="line">	</span><br><span class="line">	callback(<span class="string">"hi callback"</span>);<span class="comment">//调用回调函数</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//其他代码逻辑快</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'caller：其他代码逻辑块'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//被调用者Callee</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">param</span>)</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'callback：我被caller调用'</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'接收到caller调用我时传递的参数'</span>+param);</span><br><span class="line">&#125;</span><br><span class="line">caller(callback);<span class="comment">//将callback作为参数传递给caller</span></span><br><span class="line"></span><br><span class="line">----------</span><br><span class="line"></span><br><span class="line"><span class="comment">//大多数代码中使用回调都是采用下面这种匿名函数的方法(Java中是以匿名类的方式)</span></span><br><span class="line">caller(<span class="function"><span class="keyword">function</span>(<span class="params">param</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'callback：我被caller调用'</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'接收到caller调用我时传递的参数'</span>+param);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>在JavaScript会中更能诠释这一点,也更好理解一些。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用者Caller</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">caller</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">	<span class="comment">//其他代码逻辑块</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'caller：其他代码逻辑块'</span>);</span><br><span class="line">	</span><br><span class="line">	callback(<span class="string">"hi callback"</span>);<span class="comment">//调用回调函数</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//其他代码逻辑快</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'caller：其他代码逻辑块'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//被调用者Callee</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">param</span>)</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'callback：我被caller调用'</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'接收到caller调用我时传递的参数'</span>+param);</span><br><span class="line">&#125;</span><br><span class="line">caller(callback);<span class="comment">//将callback作为参数传递给caller</span></span><br><span class="line"></span><br><span class="line">----------</span><br><span class="line"></span><br><span class="line"><span class="comment">//大多数代码中使用回调都是采用下面这种匿名函数的方法(Java中是以匿名类的方式)</span></span><br><span class="line">caller(<span class="function"><span class="keyword">function</span>(<span class="params">param</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'callback：我被caller调用'</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'接收到caller调用我时传递的参数'</span>+param);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 <p>输出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">caller：其他代码逻辑块</span><br><span class="line">callback：我被caller调用</span><br><span class="line">接收到caller调用我时传递的参数hi callback</span><br><span class="line">caller：其他代码逻辑块</span><br></pre></td></tr></table></figure>
 <p>在Java中相对就变得麻烦了，由于语言的特性，Java要实现回调函数(代码传递)的话要依赖于接口和匿名实现类</p>
@@ -271,12 +289,12 @@ categories: 技术
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/11/callback/"></a></p>
+        <p><span>本文标题:</span><a href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Potato 的个人博客">Potato</a></p>
-        <p><span>发布时间:</span>2016年03月11日 - 13时33分</p>
-        <p><span>最后更新:</span>2016年03月22日 - 17时42分</p>
+        <p><span>发布时间:</span>2016年03月11日 - 13时53分</p>
+        <p><span>最后更新:</span>2016年03月22日 - 17时44分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/11/callback/" title="">http://potato.coding.io/2016/03/11/callback/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/11/callback/" title="关于Java 中回调函数的一些理解及与JavaScript的对比">http://potato.coding.io/2016/03/11/callback/</a>
             <span class="copy-path" data-clipboard-text="原文: http://potato.coding.io/2016/03/11/callback/　　作者: Potato" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -345,7 +363,7 @@ categories: 技术
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/proxy-server/">服务器的正向代理与反向代理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/git/">Git 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/callback/">callback</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/proxy-server/">服务器的正向代理与反向代理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/git/">Git 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/mybaits-betch-sql/">MyBatis中的批量插入、删除(MySql、Oracle)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/struts2-constant/">Struts2 - 常用的constant配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/callback/">关于Java 中回调函数的一些理解及与JavaScript的对比</a></li></ul>
     <script>
         $(".post-list").addClass("toc-article");
         $(".post-list-item a").attr("target","_blank");
